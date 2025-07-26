@@ -1,6 +1,8 @@
 # Online Course Management System
 ## Aim:
 To design an Online Course Management System using core OOP concepts and demonstrate abstraction, encapsulation, inheritance, and polymorphism through UML and code.
+## Task 1:
+#### Design a UML Class Diagram:
 ## Task 2:
 #### Implement or pseudocode the structure in JavaScript:
 ```
@@ -102,16 +104,16 @@ class Grade {
 }
 ```
 ## Task 3:
-#### Explain Your OOP Design
-###### Abstraction:
+#### Explain Your OOP Design:
+##### Abstraction:
 We abstracted common user behavior in the User class, hiding internal details and exposing only needed methods like login() and getRole().
-###### Encapsulation:
+##### Encapsulation:
 Properties like score in Grade are accessed through getters and setters to protect internal state and apply validation.
-###### Inheritance:
+##### Inheritance:
 Student and Instructor inherit from the User class, reusing shared functionality while allowing specialization.
-###### Polymorphism:
+##### Polymorphism:
 The getRole() method is overridden in both Student and Instructor, demonstrating polymorphism by changing behavior based on the object type.
-###### SOLID Principles Followed:
+##### SOLID Principles Followed:
 S – Single Responsibility Principle: Each class has one responsibility (e.g., Grade manages scores, Assignment manages submissions).
 O – Open/Closed Principle: The system can be extended (e.g., new user roles or features) without modifying existing code.
 L – Liskov Substitution Principle: Student and Instructor can be used wherever User is expected.
