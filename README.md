@@ -2,9 +2,9 @@
 ## Aim:
 To design an Online Course Management System using core OOP concepts and demonstrate abstraction, encapsulation, inheritance, and polymorphism through UML and code.
 ## Task 1:
-#### Design a UML Class Diagram:
+### Design a UML Class Diagram:
 ## Task 2:
-#### Implement or pseudocode the structure in JavaScript:
+### Implement or pseudocode the structure in JavaScript:
 ```
 class User {
     constructor(name, email) {
@@ -104,20 +104,34 @@ class Grade {
 }
 ```
 ## Task 3:
-#### Explain Your OOP Design:
-##### Abstraction:
-We abstracted common user behavior in the User class, hiding internal details and exposing only needed methods like login() and getRole().
-##### Encapsulation:
-Properties like score in Grade are accessed through getters and setters to protect internal state and apply validation.
-##### Inheritance:
-Student and Instructor inherit from the User class, reusing shared functionality while allowing specialization.
-##### Polymorphism:
-The getRole() method is overridden in both Student and Instructor, demonstrating polymorphism by changing behavior based on the object type.
-##### SOLID Principles Followed:
-S – Single Responsibility Principle: Each class has one responsibility (e.g., Grade manages scores, Assignment manages submissions).
-O – Open/Closed Principle: The system can be extended (e.g., new user roles or features) without modifying existing code.
-L – Liskov Substitution Principle: Student and Instructor can be used wherever User is expected.
-I – Interface Segregation Principle: Each class uses only what it needs. No unnecessary methods are forced.
-D – Dependency Inversion Principle: The code uses abstractions like User rather than depending on specific types.
+### Explain Your OOP Design:
+#### OOP Principles Used
+1. Abstraction:
+We used abstraction by designing high-level classes like User, Course, and Assignment that hide complex implementation details. For example, User provides a simple login() method without exposing how authentication works internally.
+
+2. Encapsulation:
+Private properties (like score, email, studentID) are protected and accessed through public getter/setter methods. This keeps internal data safe and allows validation—for instance, Grade.setScore() only accepts scores between 0 and 100.
+
+3. Inheritance:
+The User class is a base class with common attributes and behaviors. Student and Instructor inherit from it, reusing the logic while adding their own methods like enroll() and createCourse(), avoiding code duplication.
+
+4. Polymorphism:
+The getRole() method is overridden in Student and Instructor. When getRole() is called on a User reference, the correct version runs based on the actual object type. This makes the system adaptable to different user roles.
+
+#### SOLID Principles 
+S – Single Responsibility Principle:
+Each class handles one responsibility: User manages user identity, Course handles course data, Grade manages scores.
+
+O – Open/Closed Principle:
+The system allows adding new features (like a new user role) without changing existing code—thanks to interfaces and polymorphism.
+
+L – Liskov Substitution Principle:
+Anywhere a User is expected, we can safely use a Student or Instructor object without breaking functionality.
+
+I – Interface Segregation Principle:
+Each class only contains the methods it needs. There’s no bloated interface forcing unrelated methods onto a class.
+
+D – Dependency Inversion Principle:
+While not deeply shown here, the system could rely on abstract User or Switchable-like interfaces, promoting flexibility and testability.
 ## Result:
 The system was successfully modeled with a clear UML diagram and code structure, effectively applying OOP and SOLID principles.
