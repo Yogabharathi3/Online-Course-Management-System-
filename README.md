@@ -3,6 +3,8 @@
 To design an Online Course Management System using core OOP concepts and demonstrate abstraction, encapsulation, inheritance, and polymorphism through UML and code.
 ## Task 1:
 ### Design a UML Class Diagram:
+<img width="1919" height="911" alt="image" src="https://github.com/user-attachments/assets/68d33114-5bb6-413a-99e3-6b7c0d3439e2" />
+
 ## Task 2:
 ### Implement or pseudocode the structure in JavaScript:
 ```
